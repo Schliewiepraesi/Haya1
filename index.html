@@ -40,7 +40,16 @@
         <div contenteditable="true"><h1>Überschrift</h1>Schreib Einfach Irgendetwas hier hin...</div>
         <div style="flex: 1" contenteditable="true">Schreib Einfach Irgendetwas hier hin...</div>
         <div style="flex: 1" contenteditable="true">Schreib Einfach Irgendetwas hier hin...</div>
-        <input type="file" accept="image/*" class="div"style="flex: 100%">
-        <input type="file" accept=".pptx" class="div"style="flex: 100%">
+        <span><input type="file" accept="image/*" class="div"style="flex: 100%"></span>
+        <span><input type="file" accept=".pptx" class="div"style="flex: 100%"></span>
     </body>
+    <script>
+        document.getElementsByTagName("input")[0].addEventListener("change", (event) => {
+            alert("Bild hinzugefügt.(in dieser version noch nicht gespeichert)");
+        })
+        document.getElementsByTagName("input")[1].addEventListener("change", (event) => {
+            alert("powerpoint hinzugefügt.(in dieser version noch nicht gespeichert)");
+        })
+    </script>
+
 </html>
